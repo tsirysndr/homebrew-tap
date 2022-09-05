@@ -1,4 +1,4 @@
-# Tsirysndr Tap
+# tsirysndr Tap
 
 ## How do I install these formulae?
 
