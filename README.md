@@ -27,6 +27,7 @@ brew install tsirysndr/tap/genius
 brew install tsirysndr/tap/kickasstorrent
 brew install tsirysndr/tap/mixtapetorrent
 brew install tsirysndr/tap/mvola
+brew install tsirysndr/tap/musicplayer
 brew install tsirysndr/tap/piratebay
 brew install tsirysndr/tap/tononkira
 ```
