@@ -1,17 +1,17 @@
 class Musicplayer < Formula
   desc "An extensible music server written in Rust"
   homepage "https://github.com/tsirysndr/music-player"
-  url "https://github.com/tsirysndr/music-player/releases/download/v0.1.2-alpha/music-player_v0.1.2-alpha_x86_64-apple-darwin.tar.gz"
-  sha256 "fc842f6c1f3d65af5b9e35ef70bd82ed149be80d9f893da9700f0a3d8c340a49"
+  url "https://github.com/tsirysndr/music-player/releases/download/v0.1.3-alpha/music-player_v0.1.3-alpha_x86_64-apple-darwin.tar.gz"
+  sha256 "00383eaf994aac99fd32e0e0f57751e6bf3452abad4bbd439f7b6ab823d49088"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.1.2-alpha/music-player_v0.1.2-alpha_x86_64-apple-darwin.tar.gz"
-    sha256 "fc842f6c1f3d65af5b9e35ef70bd82ed149be80d9f893da9700f0a3d8c340a49"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.1.3-alpha/music-player_v0.1.3-alpha_x86_64-apple-darwin.tar.gz"
+    sha256 "00383eaf994aac99fd32e0e0f57751e6bf3452abad4bbd439f7b6ab823d49088"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.1.2-alpha/music-player_v0.1.2-alpha_x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "339fa2d14cc315440a4aafc8e66472991992fe0808edf0a2624143c8ca47f8f2"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.1.3-alpha/music-player_v0.1.3-alpha_x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "5a506cf48f4eb04bbe994916d359afb41fcda9b19efcc5d14994878e7fd0d120"
   end
 
   def install
