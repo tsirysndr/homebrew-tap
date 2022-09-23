@@ -10,7 +10,7 @@ class Musicplayer < Formula
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.1.6-alpha/music-player_v0.1.6-alpha_aarch64-apple-darwin.tar.gz.sha256"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.1.6-alpha/music-player_v0.1.6-alpha_aarch64-apple-darwin.tar.gz"
     sha256 "b3183c16b16a2d30079d2af02f4de5481256345424d7cbaba65f1e1181ea2e84"
   end
 
