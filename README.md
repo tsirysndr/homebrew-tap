@@ -31,6 +31,9 @@ brew install tsirysndr/tap/mvola
 brew install tsirysndr/tap/musicplayer
 brew install tsirysndr/tap/piratebay
 brew install tsirysndr/tap/tononkira
+
+# Casks
+brew install tsirysndr/tap/musicplayer --cask
 ```
 
 ## Documentation
