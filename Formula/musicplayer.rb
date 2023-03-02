@@ -1,22 +1,22 @@
 class Musicplayer < Formula
   desc "An extensible music server written in Rust"
   homepage "https://github.com/tsirysndr/music-player"
-  url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.7/music-player_v0.2.0-alpha.7_x86_64-apple-darwin.tar.gz"
-  sha256 "01ccd3f676e8f1073bfd26cdbd51dd4d9c6c6baa18942e7d73367bfff7119126"
+  url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.11/music-player_v0.2.0-alpha.11_x86_64-apple-darwin.tar.gz"
+  sha256 "92354fca5214c40ec8bcaac0057e1748dbaaf383f28807fbaa9564180faa4d8"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.7/music-player_v0.2.0-alpha.7_x86_64-apple-darwin.tar.gz"
-    sha256 "01ccd3f676e8f1073bfd26cdbd51dd4d9c6c6baa18942e7d73367bfff7119126"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.11/music-player_v0.2.0-alpha.11_x86_64-apple-darwin.tar.gz"
+    sha256 "92354fca5214c40ec8bcaac0057e1748dbaaf383f28807fbaa9564180faa4d8"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.7/music-player_v0.2.0-alpha.7_aarch64-apple-darwin.tar.gz"
-    sha256 "e78ea69bed947ac8fb66fffa713d036315ae1b086f3bcd35425c829e9f9e08dc"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.10/music-player_v0.2.0-alpha.10_aarch64-apple-darwin.tar.gz"
+    sha256 "baaea9b96e2330771b8acc67fc9ee0e2f22263099a31ca6cded00547ee94fb0"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.7/music-player_v0.2.0-alpha.7_x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "63377997ab8af0cb8c2b60b59b42c2c5539fe08cb9f985325fc058730da509dc"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.11/music-player_v0.2.0-alpha.11_x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "02625cb81327a91dfe5851a779f566711eda088532b13e27f990f2b6dccf1b90"
   end
 
   def install
