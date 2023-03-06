@@ -32,6 +32,7 @@ brew install tsirysndr/tap/musicplayer
 brew install tsirysndr/tap/piratebay
 brew install tsirysndr/tap/tononkira
 brew install tsirysndr/tap/tunein
+brew install tsirysndr/tap/superviseur
 
 # Casks
 brew install tsirysndr/tap/musicplayer --cask
