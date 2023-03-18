@@ -1,22 +1,22 @@
 class Superviseur < Formula
   desc "A simple process supervisor for UNIX-like systems."
   homepage "https://github.com/tsirysndr/superviseur"
-  url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.2/superviseur_v0.1.0-alpha.2_x86_64-apple-darwin.tar.gz"
-  sha256 "d49d4839b85de6b2584eb5e56db77a85313b6408cc95b692a31463b718ebbbe9"
+  url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.3/superviseur_v0.1.0-alpha.3_x86_64-apple-darwin.tar.gz"
+  sha256 "39dda6414846e07b862cad501c6960ec2f47571157a010f4d4aa23ce8be56b8a"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.2/superviseur_v0.1.0-alpha.2_x86_64-apple-darwin.tar.gz"
-    sha256 "d49d4839b85de6b2584eb5e56db77a85313b6408cc95b692a31463b718ebbbe9"
+    url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.3/superviseur_v0.1.0-alpha.3_x86_64-apple-darwin.tar.gz"
+    sha256 "39dda6414846e07b862cad501c6960ec2f47571157a010f4d4aa23ce8be56b8a"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.2/superviseur_v0.1.0-alpha.2_aarch64-apple-darwin.tar.gz"
-    sha256 "59f9f0216e2a7af03324d044aea4a64c2169f82aad1be9f2a8c8536b9833c009"
+    url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.3/superviseur_v0.1.0-alpha.3_aarch64-apple-darwin.tar.gz"
+    sha256 "527c41c086ffc40b0c443487db141a814c618aa57ef53bb8dcb4faaaa06083cb"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.2/superviseur_v0.1.0-alpha.2_x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "238bcd16e9db5ed181f80fbf31a723b6ff42fef81c5b8e94424b73e884775c17"
+    url "https://github.com/tsirysndr/superviseur/releases/download/v0.1.0-alpha.3/superviseur_v0.1.0-alpha.3_x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "c91feaf1cdb7550df59c97d956af16be56068305b77890beddbf4fc34858752"
   end
 
   def install
