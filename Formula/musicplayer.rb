@@ -11,7 +11,7 @@ class Musicplayer < Formula
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/tsirysndr/music-player/releases/download/v0.2.0-alpha.12/music-player_v0.2.0-alpha.12_aarch64-apple-darwin.tar.gz"
-    sha256 "f2ff0115a001db28df99f4825af6a3bd3d74c6d598f465a003d5f1a031a99813"
+    sha256 "29c77237cd6f664b5a1cafce0d165e80c65d06d68c8727ddf5ef76b14dde975f"
   end
 
   if OS.linux? && Hardware::CPU.intel?
