@@ -15,7 +15,7 @@ class Envhub < Formula
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.0/envhub_v0.2.1_x86_64-unknown-linux-gnu.tar.gz"
+    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.1/envhub_v0.2.1_x86_64-unknown-linux-gnu.tar.gz"
     sha256 "9bd5df60efe9830c87e0131ffcc52664838779648b913971197ff63f984791f8"
   end
 
