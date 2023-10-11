@@ -10,7 +10,7 @@ class Envhub < Formula
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.1/envhub_v0.2.0_aarch64-apple-darwin.tar.gz"
+    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.1/envhub_v0.2.1_aarch64-apple-darwin.tar.gz"
     sha256 "fc12b7bbb07589e8fc51891eaf03a4e926b79996fa30ddebc589cc860c4501d2"
   end
 
