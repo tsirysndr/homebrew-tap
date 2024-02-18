@@ -1,22 +1,22 @@
 class Envhub < Formula
   desc "Manage your dotfiles and packages with ease. Define your $HOME as Code 💻 🚀 ✨"
   homepage "https://github.com/tsirysndr/envhub"
-  url "https://github.com/tsirysndr/envhub/releases/download/v0.2.4/envhub_v0.2.4_x86_64-apple-darwin.tar.gz"
-  sha256 "b37789cfd9237146b47ee7bd65730daa34bf22c378d38cfd0a36962d63f9edde"
+  url "https://github.com/tsirysndr/envhub/releases/download/v0.2.5/envhub_v0.2.5_x86_64-apple-darwin.tar.gz"
+  sha256 "fccb15f1cf016203450ab250bc96a6feaee89b55601ab8785f6d09b88716d548"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.4/envhub_v0.2.4_x86_64-apple-darwin.tar.gz"
-    sha256 "b37789cfd9237146b47ee7bd65730daa34bf22c378d38cfd0a36962d63f9edde"
+    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.5/envhub_v0.2.5_x86_64-apple-darwin.tar.gz"
+    sha256 "fccb15f1cf016203450ab250bc96a6feaee89b55601ab8785f6d09b88716d548"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.4/envhub_v0.2.4_aarch64-apple-darwin.tar.gz"
-    sha256 "038d462a540a88adbad97e299aee1bad2ce2bccd5631705521cfa833fb793135"
+    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.5/envhub_v0.2.5_aarch64-apple-darwin.tar.gz"
+    sha256 "89db68b4e90e9585cb975e0702df1e9a095656d5b73f23efd3dd1043376062fb"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.4/envhub_v0.2.4_x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "3cddc35e58803e198b327d175ca009b324e7f9169268832398bb4a0622aa7615"
+    url "https://github.com/tsirysndr/envhub/releases/download/v0.2.5/envhub_v0.2.5_x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "5de8f3694933e1610df420febf44e3cd513ee9de421182ffb9241b936618e70f"
   end
 
   def install
