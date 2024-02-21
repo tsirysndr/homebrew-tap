@@ -23,6 +23,7 @@ With the following commands, you can install the latest version of each package:
 ```sh
 # Formulae
 brew install tsirysndr/tap/datpiff
+brew install tsirysndr/tap/envhub
 brew install tsirysndr/tap/genius
 brew install tsirysndr/tap/kickasstorrent
 brew install tsirysndr/tap/mixtapetorrent
