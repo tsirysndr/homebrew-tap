@@ -27,7 +27,9 @@ class Rockbox < Formula
   service do
     run [opt_bin/"rockboxd"]
     keep_alive true
-    environment_variables HOME: ENV["HOME"]
+    working_dir ENV["HOME"]
+    environment_variables HOME: ENV["HOME"],
+                          PATH: "#{ENV["HOME"]}/.rockbox/bin:#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     log_path var/"log/rockboxd.log"
     error_log_path var/"log/rockboxd.log"
   end
