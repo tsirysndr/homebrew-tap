@@ -31,6 +31,7 @@ brew install tsirysndr/tap/mada
 brew install tsirysndr/tap/mvola
 brew install tsirysndr/tap/musicplayer
 brew install tsirysndr/tap/piratebay
+brew install tsirysndr/tap/rockbox
 brew install tsirysndr/tap/tononkira
 brew install tsirysndr/tap/tunein
 brew install tsirysndr/tap/superviseur
