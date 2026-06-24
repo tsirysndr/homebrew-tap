@@ -1,5 +1,5 @@
 class Piratebay < Formula
-  desc "A command-line tool written in Rust to search for torrents on piratebay"
+  desc "A command-line tool written in Rust to search and download for torrents on piratebay"
   homepage "https://github.com/tsirysndr/piratebay"
   url "https://github.com/tsirysndr/piratebay/releases/download/v0.3.0/piratebay_v0.3.0_x86_64-apple-darwin.tar.gz"
   sha256 "9d8b9a61c71098169d6532591a7c67652903e930cca7817a107dac0ec592ec74"
