@@ -1,22 +1,22 @@
 class Smolsonic < Formula
   desc "A tiny Subsonic server in Rust"
   homepage "https://github.com/tsirysndr/smolsonic"
-  url "https://github.com/tsirysndr/smolsonic/releases/download/v0.4.0/smolsonic-v0.4.0-macos-aarch64.tar.gz"
-  sha256 "4ac82bcd1ac1200e35fa3bf9e68027451b4f87419d6a5cdfc5357c60305e418c"
+  url "https://github.com/tsirysndr/smolsonic/releases/download/v0.5.0/smolsonic-v0.5.0-macos-aarch64.tar.gz"
+  sha256 "8830367d6a44ff1eb4fd749804367281b99e59af0a586facd98450bdf15b8f10"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/smolsonic/releases/download/v0.4.0/smolsonic-v0.4.0-macos-amd64.tar.gz"
-    sha256 "a3a2a47639811ce59e91bea0e4e2238c07a3acff9909b8358887f7987355f78f"
+    url "https://github.com/tsirysndr/smolsonic/releases/download/v0.5.0/smolsonic-v0.5.0-macos-amd64.tar.gz"
+    sha256 "8b657c1e9268fb17282337b642d0f8b84f85aceb8dd2fe1b504709af89f95030"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/smolsonic/releases/download/v0.4.0/smolsonic-v0.4.0-macos-aarch64.tar.gz"
-    sha256 "4ac82bcd1ac1200e35fa3bf9e68027451b4f87419d6a5cdfc5357c60305e418c"
+    url "https://github.com/tsirysndr/smolsonic/releases/download/v0.5.0/smolsonic-v0.5.0-macos-aarch64.tar.gz"
+    sha256 "8830367d6a44ff1eb4fd749804367281b99e59af0a586facd98450bdf15b8f10"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/smolsonic/releases/download/v0.4.0/smolsonic-v0.4.0-linux-amd64.tar.gz"
-    sha256 "4ca74eaca8c63b62dcf206ce4bd9ec2c9dbc148a08c21dfc7236db0bad00a38c"
+    url "https://github.com/tsirysndr/smolsonic/releases/download/v0.5.0/smolsonic-v0.5.0-linux-amd64.tar.gz"
+    sha256 "a523ca2ceb8be1ab3435416099c5459d5e3a7a7422cf58f830004f42098ef5b0"
   end
 
   def install
