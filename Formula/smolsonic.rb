@@ -3,6 +3,7 @@ class Smolsonic < Formula
   homepage "https://github.com/tsirysndr/smolsonic"
   url "https://github.com/tsirysndr/smolsonic/releases/download/v0.5.1/smolsonic-v0.5.1-macos-aarch64.tar.gz"
   sha256 "365c9f6f0d328c7380a453eb36301d14815b745b38f1199454d2010ccb637fa2"
+  version "0.5.1"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/tsirysndr/smolsonic/releases/download/v0.5.1/smolsonic-v0.5.1-macos-amd64.tar.gz"
