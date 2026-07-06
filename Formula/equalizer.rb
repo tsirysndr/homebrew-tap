@@ -23,4 +23,11 @@ class Equalizer < Formula
   def install
     bin.install "equalizer"
   end
+
+  service do
+    run [opt_bin/"equalizer", "/tmp/equalizer.fifo", "--no-tui"]
+    keep_alive true
+    log_path var/"log/equalizer.log"
+    error_log_path var/"log/equalizer.log"
+  end
 end
