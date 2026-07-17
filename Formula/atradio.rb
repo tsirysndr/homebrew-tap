@@ -1,23 +1,23 @@
 class Atradio < Formula
   desc "A TUI radio player on the AT Protocol"
   homepage "https://github.com/tsirysndr/atradio.fm"
-  url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.1.0/atradio-v0.1.0-macos-aarch64.tar.gz"
-  sha256 "eb97817a8df6d6820f03d6688ad04dcd61eb27c84de31a4b9698f653c5935492"
-  version "0.1.0"
+  url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.2.0/atradio-v0.2.0-macos-aarch64.tar.gz"
+  sha256 "a9b707d5337d412ff8956f4677486f88a0e1cd1199c1dcf0b28b3aef7b96e69a"
+  version "0.2.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.1.0/atradio-v0.1.0-macos-amd64.tar.gz"
-    sha256 "230a8f17f14855b4741b5ec95ad156da5bb6e373a51339a9b516467a203f58f4"
+    url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.2.0/atradio-v0.2.0-macos-amd64.tar.gz"
+    sha256 "1ff2214b4b317fedc2e42877a9dbd75419965031841cc3474bfc611f7327f512"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.1.0/atradio-v0.1.0-macos-aarch64.tar.gz"
-    sha256 "eb97817a8df6d6820f03d6688ad04dcd61eb27c84de31a4b9698f653c5935492"
+    url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.2.0/atradio-v0.2.0-macos-aarch64.tar.gz"
+    sha256 "a9b707d5337d412ff8956f4677486f88a0e1cd1199c1dcf0b28b3aef7b96e69a"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.1.0/atradio-v0.1.0-linux-amd64.tar.gz"
-    sha256 "5ca6970e6d95e0b9e6ae1fc6c9bcb6cdfd40a31b73fc1434df5211786cb9b364"
+    url "https://github.com/tsirysndr/atradio.fm/releases/download/v0.2.0/atradio-v0.2.0-linux-amd64.tar.gz"
+    sha256 "2c17fb900458e82df5e5ca93f18bea0966715affca837426215e45711f97cc2e"
   end
 
   def install
