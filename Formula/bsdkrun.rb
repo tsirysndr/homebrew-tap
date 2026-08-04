@@ -1,10 +1,10 @@
 class Bsdkrun < Formula
   desc "Firecracker-style microVM launcher for BSD and Linux on Apple Silicon"
   homepage "https://github.com/tsirysndr/bsdkrun"
-  url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.3.2/bsdkrun-aarch64-apple-darwin.tar.gz"
-  sha256 "be7de72fac0cdef13a70ac3ba91d27b809b52b2e3deacee1caafa91a6eeed5ae"
+  url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.4.0/bsdkrun-aarch64-apple-darwin.tar.gz"
+  sha256 "83d861a0db621bb24480e13dabda1192d875f1339fa90539166dcb56f8aa11cc"
   license "MIT"
-  version "0.3.2"
+  version "0.4.0"
 
   # A signed arm64 binary linking libkrun (Hypervisor.framework, Apple Silicon).
   depends_on arch: :arm64
