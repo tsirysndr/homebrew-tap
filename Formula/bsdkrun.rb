@@ -8,10 +8,14 @@ class Bsdkrun < Formula
 
   # A signed arm64 binary linking libkrun (Hypervisor.framework, Apple Silicon).
   depends_on arch: :arm64
-  # gvproxy (user-mode networking) and libkrun live in the libkrun/krun tap;
-  # fully-qualified names make `brew` auto-tap it. xz decompresses BSD images.
+  # gvproxy (user-mode networking) comes from the libkrun/krun tap; libkrun
+  # itself is our own fork, which carries the PVH boot and virtio-fs fixes
+  # bsdkrun needs. Fully-qualified names make `brew` auto-tap them. Note that
+  # both libkrun formulae install to the same opt prefix (it is keyed on the
+  # formula name, not the tap), so an already-linked bsdkrun keeps resolving.
+  # xz decompresses BSD images.
   depends_on "libkrun/krun/gvproxy"
-  depends_on "libkrun/krun/libkrun"
+  depends_on "tsirysndr/tap/libkrun"
   depends_on "xz"
 
   def install
