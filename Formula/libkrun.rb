@@ -1,7 +1,7 @@
 class Libkrun < Formula
   desc "Dynamic library providing HVF/KVM-based process isolation (PVH + virtio-fs fork)"
   homepage "https://github.com/tsirysndr/libkrun"
-  version "1.19.5-pvh"
+  version "1.19.6-pvh"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,8 @@ class Libkrun < Formula
   end
 
   on_macos do
-    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.5-pvh/libkrun-v1.19.5-pvh-aarch64-apple-darwin.tar.gz"
-    sha256 "167dee4a52fac7a35e546e8ea1a2df5d7442de87716438b18df83d2655cbf9ef"
+    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.6-pvh/libkrun-v1.19.6-pvh-aarch64-apple-darwin.tar.gz"
+    sha256 "6ce7381915dc41bd4e4ef71e514030193d7a17c488aea297d6b0a2c87a66e91e"
 
     # Only an arm64 macOS tarball is published; the release workflow builds on
     # macos-latest (Apple silicon). libkrun dlopens libkrunfw.5.dylib at runtime
@@ -24,8 +24,8 @@ class Libkrun < Formula
 
   on_linux do
     # Note the different asset naming scheme ("libkrun-pvh-v...") on Linux.
-    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.5-pvh/libkrun-pvh-v1.19.5-pvh-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "0f8984efd8b8f4bc8e6175f8a832ad6cf7a89f13f2c7ee584c14a771bb6feca1"
+    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.6-pvh/libkrun-pvh-v1.19.6-pvh-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "e519dd9d1d9f5e2064454c1a2ad6bb87f2df33ea8a11a3145205218f63eef6be"
 
     depends_on arch: :x86_64
     # No libkrunfw dependency here: the libkrun/krun tap's libkrunfw formula is
@@ -63,7 +63,7 @@ class Libkrun < Formula
       inreplace lib/"pkgconfig/libkrun.pc", "/usr/local", prefix
     else
       # The Linux tarball ships include/ and lib64/ (SONAME libkrun.so.1 with
-      # the .so -> .so.1 -> .so.1.19.5 symlink chain plus pkgconfig/). Install
+      # the .so -> .so.1 -> .so.1.19.6 symlink chain plus pkgconfig/). Install
       # lib64 as lib to match the Homebrew-on-Linux layout — ELF has no dylib
       # id, and no codesigning is needed.
       prefix.install "include"
