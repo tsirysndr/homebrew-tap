@@ -1,7 +1,7 @@
 class Libkrun < Formula
   desc "Dynamic library providing HVF/KVM-based process isolation (PVH + virtio-fs fork)"
   homepage "https://github.com/tsirysndr/libkrun"
-  version "1.19.6-pvh"
+  version "1.19.7-pvh"
   license "Apache-2.0"
 
   livecheck do
@@ -11,8 +11,8 @@ class Libkrun < Formula
   end
 
   on_macos do
-    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.6-pvh/libkrun-v1.19.6-pvh-aarch64-apple-darwin.tar.gz"
-    sha256 "6ce7381915dc41bd4e4ef71e514030193d7a17c488aea297d6b0a2c87a66e91e"
+    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.7-pvh/libkrun-v1.19.7-pvh-aarch64-apple-darwin.tar.gz"
+    sha256 "4f85b812b6f1e80f65b1999a02e3659376a8ad23130809487c91296a1b9bf1b2"
 
     # Only an arm64 macOS tarball is published; the release workflow builds on
     # macos-latest (Apple silicon). libkrun dlopens libkrunfw.5.dylib at runtime
@@ -24,8 +24,8 @@ class Libkrun < Formula
 
   on_linux do
     # Note the different asset naming scheme ("libkrun-pvh-v...") on Linux.
-    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.6-pvh/libkrun-pvh-v1.19.6-pvh-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "e519dd9d1d9f5e2064454c1a2ad6bb87f2df33ea8a11a3145205218f63eef6be"
+    url "https://github.com/tsirysndr/libkrun/releases/download/v1.19.7-pvh/libkrun-pvh-v1.19.7-pvh-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "5a264345bef1c82b62a2e01dbb217028a3e153be03167a6d25b69d464499194c"
 
     depends_on arch: :x86_64
     # No libkrunfw dependency here: the libkrun/krun tap's libkrunfw formula is
