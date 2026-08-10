@@ -8,7 +8,6 @@ class Bsdkrund < Formula
   # a subprocess. Without the CLI it starts and then fails every request, so
   # this is a hard runtime dependency rather than a suggestion.
   depends_on "tsirysndr/tap/bsdkrun"
-  depends_on "tsirysndr/tap/bsdkrun-supervisor"
 
   on_macos do
     # macOS is Apple Silicon only, matching the CLI — bsdkrun needs an arm64
