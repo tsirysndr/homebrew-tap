@@ -35,6 +35,7 @@ class Bsdkrun < Formula
   def install
     if OS.mac?
       bin.install "bsdkrun"
+      bin.install "bsdkrun-supervisor"
       # The release binary already ships ad-hoc signed with the Hypervisor.framework
       # entitlement libkrun requires; re-assert it so it survives installation.
       (buildpath/"bsdkrun.entitlements").write <<~XML
@@ -54,8 +55,9 @@ class Bsdkrun < Formula
     else
       # No codesigning on Linux. Keep the binary next to its bundled
       # libkrun.so.1 so the $ORIGIN runpath resolves, and symlink into bin.
-      libexec.install "bsdkrun", "libkrun.so.1"
+      libexec.install "bsdkrun", "bsdkrun-supervisor", "libkrun.so.1"
       bin.install_symlink libexec/"bsdkrun"
+      bin.install_symlink libexec/"bsdkrun-supervisor"
     end
   end
 
