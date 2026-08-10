@@ -1,20 +1,21 @@
 class Bsdkrund < Formula
   desc "Token-authenticated gRPC + GraphQL daemon for driving bsdkrun remotely"
   homepage "https://github.com/tsirysndr/bsdkrun"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   # The daemon owns no VM logic: it resolves the `bsdkrun` binary and runs it as
   # a subprocess. Without the CLI it starts and then fails every request, so
   # this is a hard runtime dependency rather than a suggestion.
   depends_on "tsirysndr/tap/bsdkrun"
+    depends_on "tsirysndr/tap/bsdkrun-supervisor"
 
   on_macos do
     # macOS is Apple Silicon only, matching the CLI — bsdkrun needs an arm64
     # host for libkrun, so an Intel daemon would have no CLI to drive.
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrund-aarch64-apple-darwin.tar.gz"
-      sha256 "3ae6eec18a8d82466e44bc250807433eb673f079edecba3d8e5842d83dd3f5a3"
+      sha256 "0dc4aea002eb9e7f9cb087aa964f229794382ceefb0c15fb8dc7f7f24f0ac0c2"
     end
   end
 
@@ -22,7 +23,7 @@ class Bsdkrund < Formula
     on_intel do
       # Statically linked against musl, so it runs on any distro.
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrund-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "16b14bb0992e68eb8015cdd660c3d65f1bf9a311ab2835c1d1d1723f391d9c86"
+      sha256 "d7eb47e833e6de25d4fe9dfa51422f2d544971c38b3f9680af432bcbe81597ab"
     end
   end
 
