@@ -14,11 +14,11 @@
 # publishes. To cut a new version: bump `version`, then read each `sha256`
 # from the `.sha256` sidecar published beside its tarball, e.g.
 #
-#   curl -sL https://github.com/tsirysndr/bsdkrun/releases/download/v0.7.0/bsdkrun-supervisor-aarch64-apple-darwin.tar.gz.sha256
+#   curl -sL https://github.com/tsirysndr/bsdkrun/releases/download/v0.8.0/bsdkrun-supervisor-aarch64-apple-darwin.tar.gz.sha256
 class BsdkrunSupervisor < Formula
   desc "Runs one bsdkrun command in its own process (boot backend for bsdkrund)"
   homepage "https://github.com/tsirysndr/bsdkrun"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   # macOS links Homebrew's libkrun dynamically, same as the bsdkrun CLI — the
@@ -26,7 +26,7 @@ class BsdkrunSupervisor < Formula
   on_macos do
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-supervisor-aarch64-apple-darwin.tar.gz"
-      sha256 "32876fdd891761aef578ff67e7f214f8eccc8ab8ffcfeb9c5173bf6c9540c79e"
+      sha256 "e9acad7c0c5ad6bd3b8769174ba42c871e93264da4e5cd3640b9a34dfb065d6c"
     end
     depends_on "tsirysndr/tap/libkrun"
   end
@@ -37,11 +37,11 @@ class BsdkrunSupervisor < Formula
   on_linux do
     on_intel do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-supervisor-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9a5fa41f003fc84ece1a5259550e4c56616dca5f06fc2aed026f0ba869d94995"
+      sha256 "a21b18a351b4c3ea5d8b4068a79f29fbdc96d976aa0971088292164c5296cfd1"
     end
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-supervisor-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7be42f706a846563178b38cc82a049755db2f122d0c0d24673a7d86a7df90337"
+      sha256 "b2d308843e946dfd46d39332867050c39855255206dbeda69b4f4cc2a327a629"
     end
   end
 
