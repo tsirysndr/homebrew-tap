@@ -2,11 +2,11 @@ class Bsdkrun < Formula
   desc "Firecracker-style microVM launcher for BSD, Linux and Unikernel guests on Apple Silicon"
   homepage "https://github.com/tsirysndr/bsdkrun"
   license "MIT"
-  version "0.11.0"
+  version "0.11.1"
 
   on_macos do
-    url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.11.0/bsdkrun-aarch64-apple-darwin.tar.gz"
-    sha256 "738af17130d6ef755b4e23a80642d4883e3bf9852749ad2384fedd53bdcf1f98"
+    url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.11.1/bsdkrun-aarch64-apple-darwin.tar.gz"
+    sha256 "c75e4231bbeb7bf2ceadbb407e187634f5d82914a08a9cec6f41034f98d15051"
 
     # A signed arm64 binary linking libkrun (Hypervisor.framework, Apple Silicon).
     depends_on arch: :arm64
@@ -19,8 +19,8 @@ class Bsdkrun < Formula
   end
 
   on_linux do
-    url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.11.0/bsdkrun-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "29b567d2afd88b4b0993e0458bcfd9a102d694712f87c008f903b9ee20ac7886"
+    url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.11.1/bsdkrun-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "aff7137a5af2886a8638930be4b1967142a0c42dba32d0acab22b373cd2ef74d"
 
     depends_on arch: :x86_64
     # The Linux tarball bundles libkrun.so.1 (RUNPATH=$ORIGIN), so no libkrun
