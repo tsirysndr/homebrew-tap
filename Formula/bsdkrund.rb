@@ -1,7 +1,7 @@
 class Bsdkrund < Formula
   desc "Token-authenticated gRPC + GraphQL daemon for driving bsdkrun remotely"
   homepage "https://github.com/tsirysndr/bsdkrun"
-  version "0.11.1"
+  version "0.11.4"
   license "MIT"
 
   # The daemon links no hypervisor itself: booting a machine is handed off to
@@ -15,7 +15,7 @@ class Bsdkrund < Formula
     # an arm64 host for libkrun, so an Intel daemon would have nothing to boot with.
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrund-aarch64-apple-darwin.tar.gz"
-      sha256 "b7a51026e16994b754728f28c0d4deb41bec06d8c502de87004285245fd667ca"
+      sha256 "bd2b87cfc478ada35ed1e7c4762ec859ec4cd865e2673f90f84bbdf54e5dce44"
     end
   end
 
@@ -23,7 +23,7 @@ class Bsdkrund < Formula
     on_intel do
       # Statically linked against musl, so it runs on any distro.
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrund-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "aff7137a5af2886a8638930be4b1967142a0c42dba32d0acab22b373cd2ef74d"
+      sha256 "b250ebe6076696c1d853e1708f5210c9056bff62bb4a3ab2a26c1c3676366363"
     end
   end
 
