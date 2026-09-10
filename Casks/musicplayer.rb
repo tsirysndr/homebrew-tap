@@ -1,16 +1,16 @@
 cask "musicplayer" do
-  arch arm: "aarch64", intel: "x64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "0.2.0-alpha.8"
-  sha256 arm:   "a9f97062b241eb512f8f07a4cf46c3983d92c571edc7fa6da41c0227ab1252f4",
-         intel: "f37ad80174e28fba6aa27b427409d26cfa8c8c72898ab5412bbaa5b21660b83c"
+  version "0.3.0"
+  sha256 arm:   "fde1d7625cedba9b66cac5684fabfe51b5005755d4b6324ee5399eaed7236da1",
+         intel: "3a3b312d90ad39d4509d2fed16cfbc0f86f402f3f498295f4be787150e8d63a2"
 
-  url "https://github.com/tsirysndr/music-player/releases/download/v#{version}/Music_Player_v#{version}_#{arch}.dmg"
+  url "https://github.com/tsirysndr/music-player/releases/download/v#{version}/music-player-desktop_v#{version}_#{arch}-apple-darwin.tar.gz"
   name "musicplayer"
   desc "Music Player Desktop App"
   homepage "https://github.com/tsirysndr/music-player"
 
-  app "Music Player.app"
+  app "macos/Music Player.app"
 
   zap trash: []
 end
