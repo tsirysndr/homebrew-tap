@@ -7,8 +7,10 @@ cask "musicplayer" do
 
   url "https://github.com/tsirysndr/music-player/releases/download/v#{version}/music-player-desktop_v#{version}_#{arch}-apple-darwin.tar.gz"
   name "musicplayer"
-  desc "Music Player Desktop App"
+  desc "Desktop app for playing and streaming your local music library"
   homepage "https://github.com/tsirysndr/music-player"
+
+  depends_on macos: :big_sur
 
   app "macos/Music Player.app"
 
