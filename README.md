@@ -38,6 +38,7 @@ brew install tsirysndr/tap/superviseur
 
 # Casks
 brew install tsirysndr/tap/musicplayer --cask
+brew install tsirysndr/tap/rockbox --cask
 brew install tsirysndr/tap/rocksky --cask
 ```
 
