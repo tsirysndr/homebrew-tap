@@ -14,5 +14,12 @@ cask "musicplayer" do
 
   app "macos/Music Player.app"
 
+  # The app is ad-hoc signed, not notarized, so Gatekeeper refuses to launch it
+  # while the download carries a quarantine flag. Strip it on install rather
+  # than making every user reach for `xattr` or right-click → Open.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Music Player.app"]
+  end
+
   zap trash: []
 end
