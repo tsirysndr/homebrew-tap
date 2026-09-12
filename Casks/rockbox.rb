@@ -1,7 +1,7 @@
 cask "rockbox" do
   version "2026.09.10"
   # Bump on every release: shasum -a 256 Rockbox-#{version}-macos-aarch64.dmg
-  sha256 "027a870c7b1567d0d3e358ec9a0dd955e2b8ca7da1ed46ec3d95671dab09dca5"
+  sha256 "54c369a67eafb68382367dd83d5645e27ceac55d2e0c715e41f28523d3f4c84e"
 
   url "https://github.com/tsirysndr/rockboxd/releases/download/#{version}/Rockbox-#{version}-macos-aarch64.dmg"
   name "Rockbox Desktop"
