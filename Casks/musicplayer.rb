@@ -1,9 +1,9 @@
 cask "musicplayer" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.3.0"
-  sha256 arm:   "4d4a29595050ccdb58d7d967108faa04b271837c5dc95c8ca943b9fe4f8bf5c7",
-         intel: "85cfd614d440f6b6011b7855bf5de735cbc05c7e00f956c21d70f2db96ac9453"
+  version "0.4.1"
+  sha256 arm:   "bfbf74c90e347593b522ee036377f8fe089f536fe9668e4c69b8bb2f356f2e69",
+         intel: "a4998e7fd148f5adc5d151f303a31ca19812818b2b42c54dd60a8f62d83eeb83"
 
   url "https://github.com/tsirysndr/music-player/releases/download/v#{version}/music-player-desktop_v#{version}_#{arch}-apple-darwin.tar.gz"
   name "musicplayer"
