@@ -1,22 +1,22 @@
 class Rockbox < Formula
   desc "A modern Music Player Daemon based on Rockbox firmware"
   homepage "https://github.com/tsirysndr/rockboxd"
-  url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.10/rockbox_2026.09.10_aarch64-darwin.tar.gz"
-  sha256 "b42e43c66407328c85affb5ce73ee4df45e725b3096a95dc4aefb713eece13a7"
+  url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.13/rockbox_2026.09.13_aarch64-darwin.tar.gz"
+  sha256 "3d52a9e14275899ba2b46e87d83236f1f9a8eaca7a2fa7b1dcfdbfb4d22e190e"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.10/rockbox_2026.09.10_x86_64-darwin.tar.gz"
-    sha256 "ef6d50030f4f020b6c2bea1bc206e47be16fe7e509a39da9d04062c086706d56"
+    url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.13/rockbox_2026.09.13_x86_64-darwin.tar.gz"
+    sha256 "085a2e2eecc26c2261a514c5a78633241c720b5f2256288d42ed51dd35b28f3a"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.10/rockbox_2026.09.10_aarch64-darwin.tar.gz"
-    sha256 "b42e43c66407328c85affb5ce73ee4df45e725b3096a95dc4aefb713eece13a7"
+    url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.13/rockbox_2026.09.13_aarch64-darwin.tar.gz"
+    sha256 "3d52a9e14275899ba2b46e87d83236f1f9a8eaca7a2fa7b1dcfdbfb4d22e190e"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.10/rockbox_2026.09.10_x86_64-linux.tar.gz"
-    sha256 "d4c7231da00e98680dd8f1ae5e1fe359dc19839124f5c658669a1b576760f274"
+    url "https://github.com/tsirysndr/rockboxd/releases/download/2026.09.13/rockbox_2026.09.13_amd64-linux.tar.gz"
+    sha256 "22052e98906c63acd045c853a9304c9ca5dccdd37aa7627369766cff2473597d"
   end
 
   def install
