@@ -1,22 +1,22 @@
 class Musicplayer < Formula
   desc "An extensible music server written in Rust"
   homepage "https://github.com/tsirysndr/music-player"
-  url "https://github.com/tsirysndr/music-player/releases/download/v0.4.3/music-player_v0.4.3_aarch64-apple-darwin.tar.gz"
-  sha256 "8dc50e625d5752a48f5fc3ede4490c4ed16af1458c94130e64081fe8386c1db0"
+  url "https://github.com/tsirysndr/music-player/releases/download/v0.4.4/music-player_v0.4.4_aarch64-apple-darwin.tar.gz"
+  sha256 "5e7bf5b944909116acc523b8e1ebd52be792ffa9b381197fbba3246529000ef3"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.4.3/music-player_v0.4.3_x86_64-apple-darwin.tar.gz"
-    sha256 "bf32821aa8ede1e31e6af4b04f937590734212b0f5a713470b8857a1dd4fb723"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.4.4/music-player_v0.4.4_x86_64-apple-darwin.tar.gz"
+    sha256 "29c92d1c800070697e2022f94764bb6cec3b6a15c0c59880fa97280dffd77a58"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.4.3/music-player_v0.4.3_aarch64-apple-darwin.tar.gz"
-    sha256 "8dc50e625d5752a48f5fc3ede4490c4ed16af1458c94130e64081fe8386c1db0"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.4.4/music-player_v0.4.4_aarch64-apple-darwin.tar.gz"
+    sha256 "5e7bf5b944909116acc523b8e1ebd52be792ffa9b381197fbba3246529000ef3"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/music-player/releases/download/v0.4.3/music-player_v0.4.3_x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "caecf401b5d96be482aec4908a88447f51d3e720ef5db886e5b909bafed6671b"
+    url "https://github.com/tsirysndr/music-player/releases/download/v0.4.4/music-player_v0.4.4_x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "16cf22de3afecfd67003e5db195c439c6d253bcd66283e5e15d1e3fee7f8d784"
   end
 
   def install
