@@ -1,6 +1,6 @@
 cask "otelview" do
-  version "0.1.4"
-  sha256 "502939e6fe9f3c73b28de851bc1791afafe9f285ea496f70df5479721dd2c810"
+  version "0.2.0"
+  sha256 "c19572e90a6efeee17d8f7774593ae49f4c311c80047e06a0d8b6af0ca51eec0"
 
   url "https://github.com/tsirysndr/otelview/releases/download/v#{version}/otelview-desktop-v#{version}-macos-arm64.dmg"
   name "OtelView Desktop"
