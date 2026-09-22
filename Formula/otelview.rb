@@ -1,23 +1,23 @@
 class Otelview < Formula
   desc "Self-hosted OpenTelemetry viewer in a single binary"
   homepage "https://github.com/tsirysndr/otelview"
-  version "0.2.2"
+  version "0.3.0"
   url "https://github.com/tsirysndr/otelview/releases/download/v#{version}/otelview-v#{version}-aarch64-apple-darwin.tar.gz"
-  sha256 "8001626a528d5d13e807f40962049a75e9877253b4fed9dd4dec002faca23936"
+  sha256 "22570c1fb0fcd4cbbb5e14d45f94585fab820237d35cdd18b910acd84a82fb12"
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/tsirysndr/otelview/releases/download/v#{version}/otelview-v#{version}-aarch64-apple-darwin.tar.gz"
-    sha256 "8001626a528d5d13e807f40962049a75e9877253b4fed9dd4dec002faca23936"
+    sha256 "22570c1fb0fcd4cbbb5e14d45f94585fab820237d35cdd18b910acd84a82fb12"
   end
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/tsirysndr/otelview/releases/download/v#{version}/otelview-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "10e1bcafc0489fae8ad077348db8fbde63b22b4b233766c94fd3c16270f9dd45"
+    sha256 "797391f464c65721e2964ce9d73c2e426bdfc464ffb4131df5995717c2a7bafa"
   end
 
   if OS.linux? && Hardware::CPU.arm?
     url "https://github.com/tsirysndr/otelview/releases/download/v#{version}/otelview-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "4b5ba11b5cdeb5a2dac274bb4994ab88c1a124f0bb77022c70bf88f55d7fa02c"
+    sha256 "c236a2b5a7359acaa1960757cd6fe4f777740700920f2f89e690b263ca7f9f34"
   end
 
   def install
