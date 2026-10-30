@@ -1,23 +1,23 @@
 class Piratebay < Formula
   desc "A command-line tool written in Rust to search and download for torrents on piratebay"
   homepage "https://github.com/tsirysndr/piratebay"
-  url "https://github.com/tsirysndr/piratebay/releases/download/v0.4.0/piratebay_v0.4.0_aarch64-apple-darwin.tar.gz"
-  sha256 "3536a5ca9718bdff1093a9490126bdc5c320b99f7c93ae64945a92e4c996527d"
-  version "0.4.0"
+  url "https://github.com/tsirysndr/piratebay/releases/download/v0.5.0/piratebay_v0.5.0_aarch64-apple-darwin.tar.gz"
+  sha256 "e2afb6a566c8c50cf2ff8662621bdee9952c853c891813c33f9a507cb5e3545c"
+  version "0.5.0"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/piratebay/releases/download/v0.4.0/piratebay_v0.4.0_x86_64-apple-darwin.tar.gz"
-    sha256 "8d2bf2c3b4ce4b022472c5086d6bbe49dc5d0bc023727dcc6a51f71498811a7f"
+    url "https://github.com/tsirysndr/piratebay/releases/download/v0.5.0/piratebay_v0.5.0_x86_64-apple-darwin.tar.gz"
+    sha256 "23bc97768b1e3f6bf28524f8cd15addbee792077ce5a2125e843261d79f231c5"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tsirysndr/piratebay/releases/download/v0.4.0/piratebay_v0.4.0_aarch64-apple-darwin.tar.gz"
-    sha256 "3536a5ca9718bdff1093a9490126bdc5c320b99f7c93ae64945a92e4c996527d"
+    url "https://github.com/tsirysndr/piratebay/releases/download/v0.5.0/piratebay_v0.5.0_aarch64-apple-darwin.tar.gz"
+    sha256 "e2afb6a566c8c50cf2ff8662621bdee9952c853c891813c33f9a507cb5e3545c"
   end
   
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tsirysndr/piratebay/releases/download/v0.4.0/piratebay_v0.4.0_x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "81a0dda1c001317ac1dc31376fff6b3e8b661825e278cbfa6cbaac70e92ba9bb"
+    url "https://github.com/tsirysndr/piratebay/releases/download/v0.5.0/piratebay_v0.5.0_x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "06ad7c4d08b82a05e50b033d0a6c9c47ddcf51e610b675ff21594d3dc9e6e224"
   end
 
   def install
