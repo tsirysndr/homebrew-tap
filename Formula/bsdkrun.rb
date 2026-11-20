@@ -2,11 +2,11 @@ class Bsdkrun < Formula
   desc "Firecracker-style microVM launcher for BSD, Linux and Unikernel guests on Apple Silicon"
   homepage "https://github.com/tsirysndr/bsdkrun"
   license "MIT"
-  version "0.11.4"
+  version "0.12.0"
 
   on_macos do
-    url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.11.4/bsdkrun-aarch64-apple-darwin.tar.gz"
-    sha256 "26eb7bc4319f44ef52568e55a1bb1f7057c0f7029a89cc0218bd6482c73623df"
+    url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-apple-darwin.tar.gz"
+    sha256 "6d6c1d56cd3c373ed22c859367a156adecba033303068adc32a823985c4d21d4"
 
     # A signed arm64 binary linking libkrun (Hypervisor.framework, Apple Silicon).
     depends_on arch: :arm64
@@ -19,11 +19,17 @@ class Bsdkrun < Formula
   end
 
   on_linux do
-    url "https://github.com/tsirysndr/bsdkrun/releases/download/v0.11.4/bsdkrun-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "9b78ac1a50c6806ec01d893985b9158da79c601d8d98781a9d86971afabde24e"
+    on_intel do
+      url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7e210bfd21e01d45405f29feb7974c8709e02ae80c30001267f93ffb96ec0ff4"
+    end
 
-    depends_on arch: :x86_64
-    # The Linux tarball bundles libkrun.so.1 (RUNPATH=$ORIGIN), so no libkrun
+    on_arm do
+      url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "234166ac0458bba2f5fe2404146ec61b579e352c7c55c0bb3877b6e3e8608ce2"
+    end
+
+    # The Linux tarballs bundle libkrun.so.1 (RUNPATH=$ORIGIN), so no libkrun
     # formula dependency is needed here.
   end
 
@@ -54,6 +60,8 @@ class Bsdkrun < Formula
     else
       # No codesigning on Linux. Keep the binary next to its bundled
       # libkrun.so.1 so the $ORIGIN runpath resolves, and symlink into bin.
+      # The tarball also carries bsdkrun-supervisor; that one is installed by
+      # the bsdkrun-supervisor formula, so it is deliberately left out here.
       libexec.install "bsdkrun", "libkrun.so.1"
       bin.install_symlink libexec/"bsdkrun"
     end
