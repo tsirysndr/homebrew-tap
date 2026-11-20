@@ -1,12 +1,19 @@
 class Bsdkrun < Formula
-  desc "Firecracker-style microVM launcher for BSD, Linux and Unikernel guests on Apple Silicon"
+  desc "MicroVM launcher for BSD, Linux and unikernel guests"
   homepage "https://github.com/tsirysndr/bsdkrun"
+  version "0.12.1"
   license "MIT"
-  version "0.12.0"
+
+  # gvproxy (user-mode networking) comes from the libkrun/krun tap; the
+  # fully-qualified name makes `brew` auto-tap it. xz decompresses BSD images.
+  depends_on "libkrun/krun/gvproxy"
+  depends_on "xz"
 
   on_macos do
-    url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-apple-darwin.tar.gz"
-    sha256 "6d6c1d56cd3c373ed22c859367a156adecba033303068adc32a823985c4d21d4"
+    on_arm do
+      url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-apple-darwin.tar.gz"
+      sha256 "b59863d77b9299ce82b498888532d234ade0a4ff1300740cf6636f7855dddf15"
+    end
 
     # A signed arm64 binary linking libkrun (Hypervisor.framework, Apple Silicon).
     depends_on arch: :arm64
@@ -21,22 +28,17 @@ class Bsdkrun < Formula
   on_linux do
     on_intel do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7e210bfd21e01d45405f29feb7974c8709e02ae80c30001267f93ffb96ec0ff4"
+      sha256 "fd9d6204a568cda7661f71ae996a1d22dca3715b0f2bcaf5d44024101f74fe6e"
     end
 
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "234166ac0458bba2f5fe2404146ec61b579e352c7c55c0bb3877b6e3e8608ce2"
+      sha256 "fd1fe80fd90b55f1840f6e89ce71214745d2618e81e93008e9c1b32059c6216c"
     end
 
     # The Linux tarballs bundle libkrun.so.1 (RUNPATH=$ORIGIN), so no libkrun
     # formula dependency is needed here.
   end
-
-  # gvproxy (user-mode networking) comes from the libkrun/krun tap; the
-  # fully-qualified name makes `brew` auto-tap it. xz decompresses BSD images.
-  depends_on "libkrun/krun/gvproxy"
-  depends_on "xz"
 
   def install
     if OS.mac?
