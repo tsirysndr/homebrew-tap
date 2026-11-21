@@ -1,7 +1,7 @@
 class Bsdkrun < Formula
   desc "MicroVM launcher for BSD, Linux and unikernel guests"
   homepage "https://github.com/tsirysndr/bsdkrun"
-  version "0.12.1"
+  version "0.12.2"
   license "MIT"
 
   # gvproxy (user-mode networking) comes from the libkrun/krun tap; the
@@ -12,7 +12,7 @@ class Bsdkrun < Formula
   on_macos do
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-apple-darwin.tar.gz"
-      sha256 "b59863d77b9299ce82b498888532d234ade0a4ff1300740cf6636f7855dddf15"
+      sha256 "6ba30dd3ee9e023611f8ef33075721caf629412553a333f11b50ee40b1677bbe"
     end
 
     # A signed arm64 binary linking libkrun (Hypervisor.framework, Apple Silicon).
@@ -28,12 +28,12 @@ class Bsdkrun < Formula
   on_linux do
     on_intel do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "fd9d6204a568cda7661f71ae996a1d22dca3715b0f2bcaf5d44024101f74fe6e"
+      sha256 "8057e325ab783caaeade5a5bb56e42536ae419d91a27cc820f2e19e8a5552c1c"
     end
 
     on_arm do
       url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version}/bsdkrun-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "fd1fe80fd90b55f1840f6e89ce71214745d2618e81e93008e9c1b32059c6216c"
+      sha256 "3a4c1186ae1500c02875259da299dccb3a1e7acdb3858e88784f6bbf2fe52659"
     end
 
     # The Linux tarballs bundle libkrun.so.1 (RUNPATH=$ORIGIN), so no libkrun

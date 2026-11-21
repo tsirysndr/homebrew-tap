@@ -2,8 +2,8 @@ cask "bsdkrun" do
   # The desktop app carries its own version (first) and ships under the CLI's
   # release tag (second). Use the app version from the published DMG:
   #   shasum -a 256 bsdkrun.Desktop_<app version>_aarch64.dmg
-  version "0.1.0,0.12.1"
-  sha256 "f78c6606235b0fffb4e42d22491dec3f443467ffc9b4cc3cd6fc97a5fc211625"
+  version "0.1.0,0.12.2"
+  sha256 "81d1bae5a3a8b7b67dc35562b7a21708de8af52f41227adc399c53eb6e2203ab"
 
   url "https://github.com/tsirysndr/bsdkrun/releases/download/v#{version.csv.second}/bsdkrun.Desktop_#{version.csv.first}_aarch64.dmg"
   name "bsdkrun Desktop"
