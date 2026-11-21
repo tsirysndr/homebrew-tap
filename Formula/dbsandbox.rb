@@ -1,7 +1,7 @@
 class Dbsandbox < Formula
   desc "Database, search and authorization sandboxes with ZFS data branches"
   homepage "https://github.com/tsirysndr/dbsandbox"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   depends_on "docker"
@@ -10,7 +10,7 @@ class Dbsandbox < Formula
   on_macos do
     on_arm do
       url "https://github.com/tsirysndr/dbsandbox/releases/download/v#{version}/dbsandbox-darwin-aarch64.tar.gz"
-      sha256 "0e40c1d66b44895544067881220fc53f8a51af5810c286acd9f0d95390e76281"
+      sha256 "0098d832a1f8cdfea597b95a3338cee0053594a9b467e7eee3aa38aa0794961b"
     end
 
     depends_on arch: :arm64
@@ -19,12 +19,12 @@ class Dbsandbox < Formula
   on_linux do
     on_intel do
       url "https://github.com/tsirysndr/dbsandbox/releases/download/v#{version}/dbsandbox-linux-x86_64.tar.gz"
-      sha256 "6725733ee06f85bea8e4083761a508d1b93b4101cdcde4da528aea2851290b7a"
+      sha256 "29da9ce03defccbf667199ad66e6e314202766fd631147814d0f1e86889ca97c"
     end
 
     on_arm do
       url "https://github.com/tsirysndr/dbsandbox/releases/download/v#{version}/dbsandbox-linux-arm64.tar.gz"
-      sha256 "90f88723b8a1a54cbfad4c30132ba5c6eae29e05d1d45107e679805c20015334"
+      sha256 "915d72a7bf536f98a70a82f9689815ade60aea7113f109fe1a2f0d6e54010331"
     end
   end
 
