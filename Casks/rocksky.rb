@@ -1,9 +1,9 @@
 cask "rocksky" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.2.1"
-  sha256 arm:   "5ab5ea470712b3587e56c0e198c22285af733b4ff9595fad206202c0260a29b2",
-         intel: "561f0bf64ffa623dbda31eb4a1911a7b85e2dae2b49e7fe55fccb869dfe9440b"
+  version "1.2.3"
+  sha256 arm:   "42cf2b6ad3c144a06ee0f806f2336f339010f90cf4f6b47f8a90a5013d0b9bfc",
+         intel: "ff22a43762e09a14ecc3f361bf9ec8d194458c71603edf2cef200e56ff5fd9dc"
 
   url "https://github.com/tsirysndr/rocksky/releases/download/desktop-v#{version}/Rocksky_#{version}_#{arch}.dmg"
   name "Rocksky"
